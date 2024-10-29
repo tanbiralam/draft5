@@ -1,4 +1,4 @@
-import { GraduationCap, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Twitter, Linkedin, Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -7,10 +7,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center">
-              <GraduationCap className="h-8 w-8 text-blue-500" />
-              <span className="ml-2 text-xl font-bold text-white">
-                AcceleratorX
-              </span>
+              <img
+                src="/assets/logo/footer_logo.svg"
+                alt="footer-logo"
+                className="shadow-2xl h-8 md:h-10 lg:h-12 w-auto"
+              />
             </div>
             <p className="mt-4 text-sm">
               Transforming ambitious professionals into successful Product

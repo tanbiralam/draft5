@@ -111,7 +111,7 @@ export default function Hero() {
             className="relative"
           >
             <img
-              src="public\assets\bg.jpg"
+              src="/assets/bg.jpg"
               alt="Product Management Workshop"
               className="rounded-lg shadow-2xl"
             />
