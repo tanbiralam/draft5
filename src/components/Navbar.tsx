@@ -49,7 +49,7 @@ export default function Navbar({ onEnrollClick }: NavbarProps) {
               className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition"
               onClick={onEnrollClick}
             >
-              Enroll Now
+              Apply Now
             </button>
           </div>
 
@@ -93,7 +93,7 @@ export default function Navbar({ onEnrollClick }: NavbarProps) {
               className="w-full mt-2 bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition"
               onClick={onEnrollClick}
             >
-              Enroll Now
+              Apply Now
             </button>
           </div>
         </div>

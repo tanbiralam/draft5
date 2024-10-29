@@ -87,11 +87,14 @@ export default function Footer() {
 
           <div>
             <h3 className="text-white font-semibold mb-4">Contact</h3>
-            <ul className="space-y-2">
-              <li>info@acceleratorx.co</li>
-              <li>+1 (555) 123-4567</li>
-              <li>123 Product Street</li>
-              <li>San Francisco, CA 94105</li>
+            <ul className="space-y-2 flex flex-col">
+              <a href="mailto:info@acceleratorx.co">info@acceleratorx.co</a>
+              <a href="tel:+91-8884288277">+91 8884288277</a>
+              <a href="https://maps.app.goo.gl/ZwKSw2cJkfj1Yrjb6">
+                {" "}
+                Obeya, HSR Layout <br /> Sector 5, Bangalore <br /> Karnataka,
+                560102{" "}
+              </a>
             </ul>
           </div>
         </div>

@@ -1,20 +1,21 @@
 export const modules = [
   {
-    title: "Product Strategy",
+    title: "Industry ready",
     description:
       "Learn to develop and execute product strategies that drive business growth",
     points: ["Market Analysis", "Product Vision", "Go-to-Market Strategy"],
   },
   {
-    title: "Product Development",
-    description: "Master the end-to-end product development process",
-    points: ["Agile Methodologies", "Product Roadmap", "Sprint Planning"],
-  },
-  {
-    title: "User Research",
+    title: "Learn By Doing",
     description: "Understand user needs and validate product decisions",
     points: ["User Interviews", "Usability Testing", "Data Analysis"],
   },
+  {
+    title: "Real World Case Studies",
+    description: "Master the end-to-end product development process",
+    points: ["Agile Methodologies", "Product Roadmap", "Sprint Planning"],
+  },
+
   {
     title: "Product Analytics",
     description: "Make data-driven decisions to improve product performance",

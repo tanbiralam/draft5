@@ -38,13 +38,13 @@ const Counter: React.FC<CounterProps> = ({ end, suffix = "" }) => {
 };
 
 export default function Hero() {
-  const [isModalOpen, setIsModalOpen] = useState(false); // State to manage modal visibility
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Array of testimonials
   const testimonials = [
-    { name: "Sarah Johnson", position: "PM at Google" },
-    { name: "Michael Smith", position: "PM at Amazon" },
-    { name: "Emily Davis", position: "PM at Microsoft" },
+    { name: "Udit Bhatia", position: "PM at M3 Inc | Walmart" },
+    { name: "Ruchir Rana", position: "PM at AcceleartorX" },
+    { name: "Ravi Ahlawat", position: "PM at Paytm" },
   ];
 
   return (
@@ -75,7 +75,7 @@ export default function Hero() {
                 className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition flex items-center justify-center"
                 onClick={() => setIsModalOpen(true)} // Open modal on click
               >
-                Enroll Now <ArrowRight className="ml-2 h-5 w-5" />
+                Apply Now <ArrowRight className="ml-2 h-5 w-5" />
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -137,7 +137,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Enrollment Modal */}
       <EnrollmentModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}

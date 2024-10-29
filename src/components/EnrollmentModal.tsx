@@ -1,12 +1,15 @@
-import { X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface EnrollmentModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-export default function EnrollmentModal({ isOpen, onClose }: EnrollmentModalProps) {
+export default function EnrollmentModal({
+  isOpen,
+  onClose,
+}: EnrollmentModalProps) {
   if (!isOpen) return null;
 
   return (
@@ -36,11 +39,16 @@ export default function EnrollmentModal({ isOpen, onClose }: EnrollmentModalProp
               <X className="h-6 w-6" />
             </button>
 
-            <h3 className="text-2xl font-bold text-white mb-6">Enroll in AcceX Program</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">
+              Enroll in AcceX Program
+            </h3>
 
             <form className="space-y-4">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-300 mb-1"
+                >
                   Full Name
                 </label>
                 <input
@@ -52,7 +60,10 @@ export default function EnrollmentModal({ isOpen, onClose }: EnrollmentModalProp
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-300 mb-1"
+                >
                   Email Address
                 </label>
                 <input
@@ -64,7 +75,10 @@ export default function EnrollmentModal({ isOpen, onClose }: EnrollmentModalProp
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-1">
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-gray-300 mb-1"
+                >
                   Phone Number
                 </label>
                 <input
@@ -76,17 +90,19 @@ export default function EnrollmentModal({ isOpen, onClose }: EnrollmentModalProp
               </div>
 
               <div>
-                <label htmlFor="experience" className="block text-sm font-medium text-gray-300 mb-1">
-                  Years of Experience
+                <label
+                  htmlFor="educationLevel"
+                  className="block text-sm font-medium text-gray-300 mb-1"
+                >
+                  Education Level
                 </label>
                 <select
                   id="experience"
                   className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
-                  <option value="">Select experience</option>
-                  <option value="0-2">0-2 years</option>
-                  <option value="3-5">3-5 years</option>
-                  <option value="5+">5+ years</option>
+                  <option value="0-2">Bachelor's</option>
+                  <option value="3-5">Master's</option>
+                  <option value="5+">Others</option>
                 </select>
               </div>
 
@@ -101,7 +117,8 @@ export default function EnrollmentModal({ isOpen, onClose }: EnrollmentModalProp
             </form>
 
             <p className="mt-4 text-sm text-center text-gray-400">
-              By submitting, you agree to our Terms of Service and Privacy Policy
+              By submitting, you agree to our Terms of Service and Privacy
+              Policy
             </p>
           </motion.div>
         </div>

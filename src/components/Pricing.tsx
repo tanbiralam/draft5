@@ -4,14 +4,16 @@ import { motion } from "framer-motion";
 import EnrollmentModal from "./EnrollmentModal";
 
 const features = [
-  "12-week intensive program",
-  "1:1 mentorship sessions",
-  "Real-world project experience",
-  "Industry expert workshops",
-  "Career support & placement",
-  "Lifetime community access",
-  "Certificate of completion",
-  "Resume review & interview prep",
+  "Comprehensive Product Management Curriculum from Basic to Advance",
+  "Growth Product Management (Specialization)",
+  "Al Product Management Specialisation",
+  "Build a Product Portfolio with BYDP",
+  "Product Analytics & Industry Relevant Tools",
+  "Mock Interviews with Industry Leaders",
+  "Comprehensive Interview Guide & Practice material",
+  "Exclusive Access To Our Job Portal",
+  "Priority Screening In Job Applications & Queue",
+  "Verifiable Certificate",
 ];
 
 export default function Pricing() {
@@ -88,7 +90,7 @@ export default function Pricing() {
                 onClick={() => setIsModalOpen(true)}
                 className="mt-8 w-full bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition"
               >
-                Enroll Now
+                Apply Now
               </motion.button>
             </div>
           </div>

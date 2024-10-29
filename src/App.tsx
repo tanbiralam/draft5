@@ -6,10 +6,27 @@ import Mentors from "./components/Mentors";
 import SkillsAndTools from "./components/SkillsAndTools";
 import Pricing from "./components/Pricing";
 import Footer from "./components/Footer";
+import { useState } from "react";
+import EnrollmentModal from "./components/EnrollmentModal";
 
 function App() {
+  const [isEnrollmentModalOpen, setEnrollmentModalOpen] = useState(false);
+
+  const handleEnrollClick = () => {
+    setEnrollmentModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setEnrollmentModalOpen(false);
+  };
+
   return (
     <div className="min-h-screen relative h-full w-full bg-slate-950 text-white overflow-x-hidden">
+      <Navbar onEnrollClick={handleEnrollClick} />
+      <EnrollmentModal
+        isOpen={isEnrollmentModalOpen}
+        onClose={handleCloseModal}
+      />
       {/* Background Layer */}
       <div className="absolute inset-0 z-0">
         <div className="bg-gradient-to-b from-black via-blue-900 to-black opacity-90 absolute inset-0" />
@@ -18,11 +35,6 @@ function App() {
 
         {/* Content Layer */}
         <div className="relative z-10">
-          <Navbar
-            onEnrollClick={function (): void {
-              throw new Error("Function not implemented.");
-            }}
-          />
           <Hero />
           <Program />
           <BYDP />
