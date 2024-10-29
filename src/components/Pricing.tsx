@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import { Check, X } from 'lucide-react';
-import { motion } from 'framer-motion';
-import EnrollmentModal from './EnrollmentModal';
+import { useState } from "react";
+import { Check, X } from "lucide-react";
+import { motion } from "framer-motion";
+import EnrollmentModal from "./EnrollmentModal";
 
 const features = [
   "12-week intensive program",
@@ -11,7 +11,7 @@ const features = [
   "Career support & placement",
   "Lifetime community access",
   "Certificate of completion",
-  "Resume review & interview prep"
+  "Resume review & interview prep",
 ];
 
 export default function Pricing() {
@@ -26,9 +26,12 @@ export default function Pricing() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h2 className="text-3xl font-bold text-white">Simple, Transparent Pricing</h2>
+          <h2 className="text-3xl font-bold text-white">
+            Simple, Transparent Pricing
+          </h2>
           <p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
-            Invest in your future with our comprehensive product management program
+            Invest in your future with our comprehensive product management
+            program
           </p>
         </motion.div>
 
@@ -74,7 +77,7 @@ export default function Pricing() {
                 onClick={() => setIsModalOpen(true)}
                 className="mt-8 w-full bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition"
               >
-                Join AcceX Squad
+                Enroll Now
               </motion.button>
 
               <p className="mt-4 text-sm text-center text-gray-400">
@@ -85,7 +88,10 @@ export default function Pricing() {
         </motion.div>
       </div>
 
-      <EnrollmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <EnrollmentModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </div>
   );
 }

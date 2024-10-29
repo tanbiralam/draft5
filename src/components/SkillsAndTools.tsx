@@ -1,14 +1,25 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const tools = [
-  "Jira", "Figma", "Google Analytics", "Amplitude",
-  "Mixpanel", "Notion", "Slack", "GitHub"
+  "Jira",
+  "Figma",
+  "Google Analytics",
+  "Amplitude",
+  "Mixpanel",
+  "Notion",
+  "Slack",
+  "GitHub",
 ];
 
 const skills = [
-  "Product Strategy", "User Research", "Data Analysis",
-  "Agile Management", "Stakeholder Communication",
-  "Technical Understanding", "Business Acumen", "Design Thinking"
+  "Product Strategy",
+  "User Research",
+  "Data Analysis",
+  "Agile Management",
+  "Stakeholder Communication",
+  "Technical Understanding",
+  "Business Acumen",
+  "Design Thinking",
 ];
 
 export default function SkillsAndTools() {
@@ -30,7 +41,9 @@ export default function SkillsAndTools() {
         <div className="mt-16 grid md:grid-cols-2 gap-12">
           {/* Tools Section */}
           <div>
-            <h3 className="text-xl font-semibold text-white mb-8">Tools You'll Master</h3>
+            <h3 className="text-xl font-semibold text-white mb-8">
+              Tools You'll Master
+            </h3>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {tools.map((tool, index) => (
                 <motion.div
@@ -48,7 +61,9 @@ export default function SkillsAndTools() {
 
           {/* Skills Section */}
           <div>
-            <h3 className="text-xl font-semibold text-white mb-8">Skills You'll Develop</h3>
+            <h3 className="text-xl font-semibold text-white mb-8">
+              Skills You'll Develop
+            </h3>
             <div className="space-y-4">
               {skills.map((skill, index) => (
                 <motion.div
