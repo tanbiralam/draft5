@@ -1,4 +1,4 @@
-import { GraduationCap, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { GraduationCap, Twitter, Linkedin, Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -8,10 +8,13 @@ export default function Footer() {
           <div>
             <div className="flex items-center">
               <GraduationCap className="h-8 w-8 text-blue-500" />
-              <span className="ml-2 text-xl font-bold text-white">AcceleratorX</span>
+              <span className="ml-2 text-xl font-bold text-white">
+                AcceleratorX
+              </span>
             </div>
             <p className="mt-4 text-sm">
-              Transforming ambitious professionals into successful Product Managers through expert-led training and mentorship.
+              Transforming ambitious professionals into successful Product
+              Managers through expert-led training and mentorship.
             </p>
             <div className="mt-6 flex space-x-4">
               <a href="#" className="hover:text-blue-500 transition">
@@ -25,40 +28,77 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          
+
           <div>
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="#program" className="hover:text-blue-500 transition">Program</a></li>
-              <li><a href="#benefits" className="hover:text-blue-500 transition">Benefits</a></li>
-              <li><a href="#curriculum" className="hover:text-blue-500 transition">Curriculum</a></li>
-              <li><a href="#" className="hover:text-blue-500 transition">Blog</a></li>
+              <li>
+                <a href="#program" className="hover:text-blue-500 transition">
+                  Program
+                </a>
+              </li>
+              <li>
+                <a href="#benefits" className="hover:text-blue-500 transition">
+                  Benefits
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#curriculum"
+                  className="hover:text-blue-500 transition"
+                >
+                  Curriculum
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-blue-500 transition">
+                  Blog
+                </a>
+              </li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-white font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-blue-500 transition">Success Stories</a></li>
-              <li><a href="#" className="hover:text-blue-500 transition">FAQs</a></li>
-              <li><a href="#" className="hover:text-blue-500 transition">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-blue-500 transition">Terms of Service</a></li>
+              <li>
+                <a href="#" className="hover:text-blue-500 transition">
+                  Success Stories
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-blue-500 transition">
+                  FAQs
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-blue-500 transition">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-blue-500 transition">
+                  Terms of Service
+                </a>
+              </li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-white font-semibold mb-4">Contact</h3>
             <ul className="space-y-2">
-              <li>contact@acceleratorx.co</li>
+              <li>info@acceleratorx.co</li>
               <li>+1 (555) 123-4567</li>
               <li>123 Product Street</li>
               <li>San Francisco, CA 94105</li>
             </ul>
           </div>
         </div>
-        
+
         <div className="mt-12 pt-8 border-t border-gray-800 text-sm text-center">
-          <p>&copy; {new Date().getFullYear()} AcceleratorX. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} AcceleratorX. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

@@ -1,69 +1,91 @@
-import { motion } from 'framer-motion';
-
-const mentors = [
-  {
-    name: "Sarah Chen",
-    role: "Senior PM at Google",
-    experience: "10+ years in Product",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
-  },
-  {
-    name: "Michael Rodriguez",
-    role: "Director of Product at Meta",
-    experience: "12+ years in Tech",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
-  },
-  {
-    name: "Emily Wong",
-    role: "Product Lead at Amazon",
-    experience: "8+ years in Product",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
-  },
-  {
-    name: "David Kim",
-    role: "VP Product at Spotify",
-    experience: "15+ years in Tech",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
-  }
-];
+import { motion } from "framer-motion";
+import { Users, Award } from "lucide-react";
+import { mentors } from "../utils/constants";
 
 export default function Mentors() {
   return (
-    <div className="py-24 bg-gray-900 overflow-hidden">
+    <section className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-16 relative"
         >
-          <h2 className="text-3xl font-bold text-white">Learn from the Best</h2>
-          <p className="mt-4 text-lg text-gray-400">
-            Our mentors are industry leaders with proven track records
+          <div className="inline-block mb-4">
+            <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-500/10 mx-auto">
+              <Users className="w-8 h-8 text-blue-500" />
+            </div>
+          </div>
+          <h2 className="text-4xl font-bold text-white mb-4 tracking-tight">
+            Learn from Industry Experts
+          </h2>
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            Connect with seasoned professionals who have transformed careers
           </p>
         </motion.div>
-        <div className="mentor-scroll flex gap-8 py-4">
-          {[...mentors, ...mentors].map((mentor, index) => (
-            <div
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {mentors.map((mentor, index) => (
+            <motion.div
               key={index}
-              className="flex-none w-72 bg-gray-800 p-6 rounded-xl hover:shadow-xl transition-all duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="group relative"
             >
-              <div className="flex items-center gap-4">
-                <img
-                  src={mentor.image}
-                  alt={mentor.name}
-                  className="w-16 h-16 rounded-full object-cover"
-                />
-                <div>
-                  <h3 className="text-lg font-semibold text-white">{mentor.name}</h3>
-                  <p className="text-blue-400">{mentor.role}</p>
-                  <p className="text-sm text-gray-400 mt-1">{mentor.experience}</p>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400 rounded-2xl opacity-0 group-hover:opacity-10 transition-all duration-300 blur-xl" />
+              <div className="relative overflow-hidden rounded-2xl bg-gray-900 border border-gray-800 p-6 hover:border-blue-500/30 transition-all duration-300 h-64">
+                {" "}
+                {/* Set fixed height */}
+                <div className="absolute top-2 right-2">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-500/10 text-blue-500">
+                    Available
+                  </span>
+                </div>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="relative">
+                    <div className="w-16 h-16 rounded-full overflow-hidden ring-2 ring-blue-500/20 group-hover:ring-blue-500/40 transition-all duration-300">
+                      <img
+                        src={mentor.image}
+                        alt={mentor.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="absolute -bottom-1 -right-1 bg-blue-500 rounded-full p-1">
+                      <Award className="w-3 h-3 text-white" />
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors duration-300">
+                      {mentor.name}
+                    </h3>
+                    <p className="text-blue-500 font-medium">{mentor.role}</p>
+                  </div>
+                </div>
+                <div className="mt-auto space-y-4">
+                  {" "}
+                  {/* Use mt-auto to push this section down */}
+                  <div className="flex items-center justify-between text-gray-400 text-sm">
+                    <span>Experience</span>
+                    <span className="font-medium text-white">
+                      {mentor.experience}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between text-gray-400 text-sm">
+                    <span>Transitions</span>
+                    <span className="font-medium text-white">
+                      {mentor.transitions}
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

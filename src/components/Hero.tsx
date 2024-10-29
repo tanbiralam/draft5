@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import EnrollmentModal from "./EnrollmentModal"; // Import the EnrollmentModal
 
 interface CounterProps {
   end: number;
@@ -37,13 +38,17 @@ const Counter: React.FC<CounterProps> = ({ end, suffix = "" }) => {
 };
 
 export default function Hero() {
-  return (
-    <div className="relative bg-gray-900 pt-24 pb-16 overflow-hidden">
-      {/* Background Layer */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-900 to-gray-800 z-0" />
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-transparent to-black opacity-80 z-0" />
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-mesh.png')] opacity-20 z-0" />
+  const [isModalOpen, setIsModalOpen] = useState(false); // State to manage modal visibility
 
+  // Array of testimonials
+  const testimonials = [
+    { name: "Sarah Johnson", position: "PM at Google" },
+    { name: "Michael Smith", position: "PM at Amazon" },
+    { name: "Emily Davis", position: "PM at Microsoft" },
+  ];
+
+  return (
+    <div className="relative pt-24 pb-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -68,13 +73,14 @@ export default function Hero() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition flex items-center justify-center"
+                onClick={() => setIsModalOpen(true)} // Open modal on click
               >
                 Enroll Now <ArrowRight className="ml-2 h-5 w-5" />
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-blue-600 text-blue-500 px-8 py-3 rounded-full hover:bg-blue-600/10 transition"
+                className="border-2 border-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-600/10 transition"
               >
                 Download Syllabus
               </motion.button>
@@ -105,31 +111,37 @@ export default function Hero() {
             className="relative"
           >
             <img
-              src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+              src="src/assets/bg.jpg"
               alt="Product Management Workshop"
               className="rounded-lg shadow-2xl"
             />
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="absolute -bottom-6 -left-6 bg-gray-800 p-4 rounded-lg shadow-lg"
-            >
-              <div className="flex items-center gap-4">
-                <img
-                  src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
-                  alt="Student"
-                  className="w-12 h-12 rounded-full"
-                />
-                <div>
-                  <p className="font-semibold text-white">Sarah Johnson</p>
-                  <p className="text-sm text-gray-400">PM at Google</p>
-                </div>
-              </div>
-            </motion.div>
+            <div className="absolute -bottom-6 -left-6 flex flex-row gap-4">
+              {testimonials.map((testimonial, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 * index }}
+                  className="flex flex-col items-center bg-slate-950 p-2 rounded-lg shadow-lg w-32 md:w-48"
+                >
+                  <p className="font-semibold text-white text-sm">
+                    {testimonial.name}
+                  </p>
+                  <p className="text-xs text-gray-400">
+                    {testimonial.position}
+                  </p>{" "}
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </div>
+
+      {/* Enrollment Modal */}
+      <EnrollmentModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </div>
   );
 }

@@ -32,20 +32,7 @@ const bydpSteps = [
 export default function BYDP() {
   return (
     <div className="relative py-24 overflow-hidden" id="bydp">
-      {/* Background Layers */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-900 to-black opacity-95 z-0"></div>
-      <div className="absolute inset-0 z-0">
-        <div
-          className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-500/20 via-blue-900/10 to-transparent
-          absolute w-full h-full opacity-50 transform scale-150"
-        ></div>
-        <div
-          className="bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-blue-800/30 via-transparent to-transparent
-          absolute bottom-0 right-0 w-[60vw] h-[60vh] opacity-40"
-        ></div>
-      </div>
-
-      {/* Content */}
+      {/* Content Layer */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -69,7 +56,7 @@ export default function BYDP() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
-              className="bg-gray-900/60 p-6 rounded-xl hover:shadow-xl hover:bg-gray-900/80 transition-all duration-300"
+              className="bg-gray-900/60 p-6 rounded-xl hover:shadow-xl group-hover:text-blue-400 transition-colors duration-300 border"
             >
               <div className="inline-block p-3 bg-blue-500/10 rounded-lg">
                 {step.icon}
@@ -81,6 +68,34 @@ export default function BYDP() {
               <p className="mt-4 text-sm text-blue-400">{step.duration}</p>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-16 p-6 rounded-xl bg-blue-900/20 border border-blue-900/40">
+          <h3 className="text-xl font-semibold mb-4 text-center text-blue-400">
+            What You'll Achieve
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-blue-500 mb-2">
+                Portfolio
+              </div>
+              <p className="text-gray-300">A real product in your portfolio</p>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-blue-500 mb-2">
+                Experience
+              </div>
+              <p className="text-gray-300">
+                Hands-on product development experience
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-blue-500 mb-2">
+                Network
+              </div>
+              <p className="text-gray-300">Connect with industry experts</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

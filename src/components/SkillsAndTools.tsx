@@ -1,85 +1,69 @@
 import { motion } from "framer-motion";
-
-const tools = [
-  "Jira",
-  "Figma",
-  "Google Analytics",
-  "Amplitude",
-  "Mixpanel",
-  "Notion",
-  "Slack",
-  "GitHub",
-];
-
-const skills = [
-  "Product Strategy",
-  "User Research",
-  "Data Analysis",
-  "Agile Management",
-  "Stakeholder Communication",
-  "Technical Understanding",
-  "Business Acumen",
-  "Design Thinking",
-];
+import { skills, tools } from "../utils/constants";
+import { useEffect, useState } from "react";
+import { ToolCard } from "./ToolCard";
+import { SkillCard } from "./SkillCard";
 
 export default function SkillsAndTools() {
+  const [visibleSkills, setVisibleSkills] = useState(skills.slice(0, 4));
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => {
+        const newIndex = (prevIndex + 4) % skills.length;
+        setVisibleSkills(skills.slice(newIndex, newIndex + 4));
+        return newIndex;
+      });
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="py-24 bg-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-24 overflow-hidden bg-navy-950">
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-purple-500/5" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,255,0.1)_0%,transparent_100%)]" />
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl font-bold text-white">Skills & Tools</h2>
-          <p className="mt-4 text-lg text-gray-400">
+          <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r text-white bg-clip-text text-transparent">
+            Skills & Tools
+          </h2>
+          <p className="mt-4 text-xl text-gray-400">
             Master the essential skills and tools used by top Product Managers
           </p>
         </motion.div>
 
-        <div className="mt-16 grid md:grid-cols-2 gap-12">
-          {/* Tools Section */}
-          <div>
-            <h3 className="text-xl font-semibold text-white mb-8">
+        <div className="grid md:grid-cols-2 gap-12">
+          <div className="space-y-6">
+            <h3 className="text-2xl font-semibold text-white mb-8">
               Tools You'll Master
             </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {tools.map((tool, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-gray-900 p-4 rounded-lg text-center"
-                >
-                  <span className="text-gray-300">{tool}</span>
-                </motion.div>
+                <ToolCard key={tool.name} tool={tool} index={index} />
               ))}
             </div>
           </div>
 
-          {/* Skills Section */}
-          <div>
-            <h3 className="text-xl font-semibold text-white mb-8">
+          <div className="space-y-6">
+            <h3 className="text-2xl font-semibold text-white mb-8">
               Skills You'll Develop
             </h3>
             <div className="space-y-4">
-              {skills.map((skill, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-gray-900 p-4 rounded-lg"
-                >
-                  <span className="text-gray-300">{skill}</span>
-                </motion.div>
+              {visibleSkills.map((skill, index) => (
+                <SkillCard key={skill} skill={skill} index={index} />
               ))}
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,7 +1,11 @@
 import { useState } from "react";
-import { Menu, X, GraduationCap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
-export default function Navbar() {
+interface NavbarProps {
+  onEnrollClick: () => void;
+}
+
+export default function Navbar({ onEnrollClick }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -41,7 +45,10 @@ export default function Navbar() {
             >
               Pricing
             </a>
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">
+            <button
+              className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition"
+              onClick={onEnrollClick}
+            >
               Enroll Now
             </button>
           </div>
@@ -82,7 +89,10 @@ export default function Navbar() {
             >
               Pricing
             </a>
-            <button className="w-full mt-2 bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">
+            <button
+              className="w-full mt-2 bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition"
+              onClick={onEnrollClick}
+            >
               Enroll Now
             </button>
           </div>

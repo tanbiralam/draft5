@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Check, X } from "lucide-react";
+import { Check } from "lucide-react";
 import { motion } from "framer-motion";
 import EnrollmentModal from "./EnrollmentModal";
 
@@ -16,6 +16,8 @@ const features = [
 
 export default function Pricing() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const originalPrice = 59000;
+  const discountedPrice = 47200;
 
   return (
     <div className="py-24 bg-gray-900" id="pricing">
@@ -40,14 +42,23 @@ export default function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="mt-16 max-w-lg mx-auto"
+          className="mt-16 max-w-lg mx-auto relative"
         >
+          {/* Ribbon for Discount */}
+          <div className="absolute top-0 left-0 transform -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white px-3 py-1 rounded-br-lg text-sm font-semibold">
+            20% Off
+          </div>
+
           <div className="bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
             <div className="p-8 text-center">
               <h3 className="text-2xl font-bold text-white">Premium Program</h3>
               <div className="mt-4 flex items-baseline justify-center">
-                <span className="text-5xl font-bold text-white">$2,999</span>
-                <span className="ml-2 text-gray-400">/one-time</span>
+                <span className="text-5xl font-bold text-white">
+                  ₹{discountedPrice.toLocaleString()}
+                </span>
+                <span className="ml-2 text-gray-400 line-through">
+                  ₹{originalPrice.toLocaleString()}
+                </span>
               </div>
               <p className="mt-4 text-gray-400">
                 Everything you need to become a successful Product Manager
@@ -79,10 +90,6 @@ export default function Pricing() {
               >
                 Enroll Now
               </motion.button>
-
-              <p className="mt-4 text-sm text-center text-gray-400">
-                30-day money-back guarantee
-              </p>
             </div>
           </div>
         </motion.div>
