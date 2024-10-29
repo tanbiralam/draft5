@@ -74,7 +74,7 @@ export default function Pricing() {
                 onClick={() => setIsModalOpen(true)}
                 className="mt-8 w-full bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition"
               >
-                Enroll Now
+                Join AcceX Squad
               </motion.button>
 
               <p className="mt-4 text-sm text-center text-gray-400">

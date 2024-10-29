@@ -24,7 +24,7 @@ export default function Hero() {
                 whileTap={{ scale: 0.95 }}
                 className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition flex items-center justify-center"
               >
-                Join Now <ArrowRight className="ml-2 h-5 w-5" />
+                Join AcceX Squad <ArrowRight className="ml-2 h-5 w-5" />
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
