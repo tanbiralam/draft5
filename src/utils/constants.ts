@@ -48,28 +48,28 @@ export const modules = [
 ];
 
 export const tools = [
-  { name: "Jira", image: "public/assets/logo/Jira.png" },
-  { name: "Figma", image: "public/assets/logo/Figma.png" },
+  { name: "Jira", image: "/assets/logo/Jira.png" },
+  { name: "Figma", image: "/assets/logo/Figma.png" },
   {
     name: "Google Analytics",
-    image: "public/assets/logo/Google Analytics.png",
+    image: "/assets/logo/Google Analytics.png",
   },
   {
     name: "Amplitude",
-    image: "public/assets/logo/Amplitude.png",
+    image: "/assets/logo/Amplitude.png",
   },
-  { name: "Mixpanel", image: "public/assets/logo/Mixpanel.png" },
-  { name: "notion", image: "public/assets/logo/notion.png" },
-  { name: "Asana", image: "public/assets/logo/Asana.png" },
-  { name: "GitHub", image: "public/assets/logo/github.png" },
+  { name: "Mixpanel", image: "/assets/logo/Mixpanel.png" },
+  { name: "notion", image: "/assets/logo/notion.png" },
+  { name: "Asana", image: "/assets/logo/Asana.png" },
+  { name: "GitHub", image: "/assets/logo/github.png" },
   {
     name: "User testing",
-    image: "public/assets/logo/User testing.png",
+    image: "/assets/logo/User testing.png",
   },
-  { name: "Postman", image: "public/assets/logo/Postman.png" },
-  { name: "Miro", image: "public/assets/logo/Miro.png" },
-  { name: "Mysql", image: "public/assets/logo/Mysql.png" },
-  { name: "Whimsical", image: "public/assets/logo/Whimsical.png" },
+  { name: "Postman", image: "/assets/logo/Postman.png" },
+  { name: "Miro", image: "/assets/logo/Miro.png" },
+  { name: "Mysql", image: "/assets/logo/Mysql.png" },
+  { name: "Whimsical", image: "/assets/logo/Whimsical.png" },
 ];
 
 export const skills = [

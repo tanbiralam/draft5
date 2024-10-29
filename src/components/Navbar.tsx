@@ -14,7 +14,7 @@ export default function Navbar({ onEnrollClick }: NavbarProps) {
         <div className="flex justify-between h-16 items-center">
           <div className="flex items-center">
             <img
-              src="public/static/assets/logo/logo.png"
+              src="/assets/logo/logo.png"
               alt="logo"
               className="shadow-2xl h-8 md:h-10 lg:h-12 w-auto"
             />
