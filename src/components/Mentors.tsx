@@ -33,18 +33,18 @@ export default function Mentors() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group relative"
+              className="group relative "
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400 rounded-2xl opacity-0 group-hover:opacity-10 transition-all duration-300 blur-xl" />
-              <div className="relative overflow-hidden rounded-2xl bg-gray-900 border border-gray-800 p-6 hover:border-blue-500/30 transition-all duration-300 h-64">
+              <div className="relative overflow-hidden rounded-2xl bg-gray-900 border border-gray-800 p-6 hover:border-blue-500/30 transition-all duration-300 h-64 glow-border">
                 {" "}
                 {/* Set fixed height */}
-                <div className="absolute top-2 right-2">
+                {/* <div className="absolute top-2 right-2">
                   <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-500/10 text-blue-500">
                     Available
                   </span>
-                </div>
-                <div className="flex items-center gap-4 mb-4">
+                </div> */}
+                <div className="flex items-center gap-4 mb-4 ">
                   <div className="relative">
                     <div className="w-16 h-16 rounded-full overflow-hidden ring-2 ring-blue-500/20 group-hover:ring-blue-500/40 transition-all duration-300">
                       <img

@@ -1,5 +1,3 @@
-import { Twitter, Linkedin, Instagram } from "lucide-react";
-
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
@@ -17,17 +15,6 @@ export default function Footer() {
               Transforming ambitious professionals into successful Product
               Managers through expert-led training and mentorship.
             </p>
-            <div className="mt-6 flex space-x-4">
-              <a href="#" className="hover:text-blue-500 transition">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="hover:text-blue-500 transition">
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="hover:text-blue-500 transition">
-                <Instagram className="h-5 w-5" />
-              </a>
-            </div>
           </div>
 
           <div>
@@ -63,22 +50,18 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:text-blue-500 transition">
-                  Success Stories
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-blue-500 transition">
-                  FAQs
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-blue-500 transition">
+                <a
+                  href="https://acceleratorx.co/privacy-policy"
+                  className="hover:text-blue-500 transition"
+                >
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-500 transition">
+                <a
+                  href="https://acceleratorx.co/terms-conditions"
+                  className="hover:text-blue-500 transition"
+                >
                   Terms of Service
                 </a>
               </li>

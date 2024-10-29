@@ -22,8 +22,8 @@ export default function SkillsAndTools() {
 
   return (
     <section className="relative py-24 overflow-hidden bg-navy-950">
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-purple-500/5" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,255,0.1)_0%,transparent_100%)]" />
+      <div className="absolute inset-0 bg-black" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.1)_0%,transparent_100%)]" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.div

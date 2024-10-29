@@ -50,6 +50,15 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.glow-border {
+  border: 2px solid transparent;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  border-color: rgba(66, 153, 225, 0.5);
+  box-shadow: 0 0 20px rgba(66, 153, 225, 0.6);
+}
+
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;

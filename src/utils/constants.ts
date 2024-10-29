@@ -1,50 +1,53 @@
 export const modules = [
   {
-    title: "Industry ready",
+    title: "Industry Ready.",
+    description: " Industry Verified Certification.",
+    image: "/assets/program/security.png",
+  },
+  {
+    title: "Learn By Doing.",
+    description: "Apply your knowledge, Learn by Building your dream product",
+    image: "/assets/program/learning.png",
+  },
+  {
+    title: "Real World Case Studies.",
+    description: " Case Studies That actually matter",
+    image: "/assets/program/file-case.png",
+  },
+  {
+    title: "Interview Prep",
     description:
-      "Learn to develop and execute product strategies that drive business growth",
-    points: ["Market Analysis", "Product Vision", "Go-to-Market Strategy"],
+      "Ace your interviews. Get expert guidance from seasoned product leaders.",
+    image: "/assets/program/mentorship.png",
   },
   {
-    title: "Learn By Doing",
-    description: "Understand user needs and validate product decisions",
-    points: ["User Interviews", "Usability Testing", "Data Analysis"],
-  },
-  {
-    title: "Real World Case Studies",
-    description: "Master the end-to-end product development process",
-    points: ["Agile Methodologies", "Product Roadmap", "Sprint Planning"],
+    title: "Mock Interview",
+    description: "Refine your skills with realistic mock interviews.",
+    image: "/assets/program/meeting.png",
   },
 
   {
-    title: "Product Analytics",
-    description: "Make data-driven decisions to improve product performance",
-    points: ["Metrics Definition", "A/B Testing", "Growth Analysis"],
+    title: "Dedicated Job Portal",
+    description:
+      "Your career launchpad. Access exclusive job opportunities and connect with top companies.",
+    image: "/assets/program/job-portal.png",
   },
   {
-    title: "Product Analytics",
-    description: "Make data-driven decisions to improve product performance",
-    points: ["Metrics Definition", "A/B Testing", "Growth Analysis"],
+    title: "Wide pool of network",
+    description:
+      "Connect with a thriving community of ambitious product professionals.",
+    image: "/assets/program/networking.png",
   },
   {
-    title: "Product Analytics",
-    description: "Make data-driven decisions to improve product performance",
-    points: ["Metrics Definition", "A/B Testing", "Growth Analysis"],
+    title: "Showcase your product sense",
+    description:
+      "Shine bright. Present your own product and impress potential employers.",
+    image: "/assets/program/state.png",
   },
   {
-    title: "Product Analytics",
-    description: "Make data-driven decisions to improve product performance",
-    points: ["Metrics Definition", "A/B Testing", "Growth Analysis"],
-  },
-  {
-    title: "Product Analytics",
-    description: "Make data-driven decisions to improve product performance",
-    points: ["Metrics Definition", "A/B Testing", "Growth Analysis"],
-  },
-  {
-    title: "Product Analytics",
-    description: "Make data-driven decisions to improve product performance",
-    points: ["Metrics Definition", "A/B Testing", "Growth Analysis"],
+    title: "Life Time Access To Content and Videos",
+    description: "Get updated content as you go",
+    image: "/assets/program/exclusive.png",
   },
 ];
 
@@ -124,14 +127,14 @@ export const mentors = [
     role: "Senior PM at Paytm",
     experience: "5 years",
     image: "/assets/mentor/8x10 (1)~7.JPG",
-    transitions: "Over 650+",
+    transitions: "Over 350+",
   },
   {
     name: "Udit Bhatia",
     role: "Senior Product Manager at Walmart",
     experience: "9 years",
     image: "/assets/mentor/unnamed.jpg",
-    transitions: "Over 350+",
+    transitions: "Over 650+",
   },
   {
     name: "Ruchir Rana",

@@ -14,7 +14,7 @@ export const SkillCard = ({ skill, index }: SkillCardProps) => {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="group"
     >
-      <div className="p-4 bg-navy-900/50 border border-blue-500/20 rounded-xl backdrop-blur-sm transition-all duration-300 group-hover:border-blue-500/50">
+      <div className="p-4 bg-navy-900/50 border border-blue-500/20 rounded-xl backdrop-blur-sm transition-all duration-300 group-hover:border-blue-500/50 glow-border ">
         <div className="flex items-center space-x-3">
           <div className="h-2 w-2 rounded-full bg-blue-400 group-hover:bg-blue-300" />
           <span className="text-white group-hover:text-white transition-colors font-semibold">

@@ -43,7 +43,7 @@ export default function Hero() {
   // Array of testimonials
   const testimonials = [
     { name: "Udit Bhatia", position: "PM at M3 Inc | Walmart" },
-    { name: "Ruchir Rana", position: "PM at AcceleartorX" },
+    { name: "Ruchir Rana", position: "PM at AcceleratorX" },
     { name: "Ravi Ahlawat", position: "PM at Paytm" },
   ];
 
@@ -82,7 +82,7 @@ export default function Hero() {
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-600/10 transition"
               >
-                Download Syllabus
+                Download Curriculum
               </motion.button>
             </div>
             <div className="mt-8 flex items-center gap-8">
