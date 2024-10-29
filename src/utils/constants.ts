@@ -52,7 +52,7 @@ export const tools = [
   { name: "Figma", image: "/assets/logo/Figma.png" },
   {
     name: "Google Analytics",
-    image: "/assets/logo/Google Analytics.png",
+    image: "public/assets/logo/GoogleAnalytics.png",
   },
   {
     name: "Amplitude",
@@ -115,28 +115,28 @@ export const mentors = [
     name: "Anand Muralidharan",
     role: "Senior PM at Google",
     experience: "13 Years",
-    image: "src/assets/mentors/Anand Photo.jpg",
+    image: "public/assets/mentor/Anand Photo.jpg",
     transitions: "Over 500+",
   },
   {
     name: "Ravi Ahlawat",
     role: "Senior PM at Paytm",
     experience: "5 years",
-    image: "src/assets/mentors/8x10 (1)~7.JPG",
+    image: "public/assets/mentor/8x10 (1)~7.JPG",
     transitions: "Over 650+",
   },
   {
     name: "Udit Bhatia",
     role: "Senior Product Manager at Walmart",
     experience: "9 years",
-    image: "src/assets/mentors/unnamed.jpg",
+    image: "public/assets/mentor/unnamed.jpg",
     transitions: "Over 350+",
   },
   {
     name: "Ruchir Rana",
     role: "Product Manager",
     experience: "3 years",
-    image: "src/assets/mentors/IMG_4784.jpg",
+    image: "public/assets/mentor/IMG_4784.jpg",
     transitions: "Over 100+",
   },
 ];
